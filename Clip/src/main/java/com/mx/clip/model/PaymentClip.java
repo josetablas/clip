@@ -32,15 +32,7 @@ public class PaymentClip implements Serializable {
 
 	@NotNull
 	private double amount;
-/*
-	@JsonProperty("terms")
-	@Min(4)
-	@Max(52)
-	@NotNull
-	private Integer terms;*/
 
-	//@NotNull
-//	private double rate;
 
 	@Column(name = "date_pay")
 	@Temporal(TemporalType.DATE)
@@ -55,7 +47,7 @@ public class PaymentClip implements Serializable {
 		super();
 	}
 
-	public PaymentClip(Long payment_number, double amount, /*Integer terms,double rate,*/  Date payment_date,String status, String user) {
+	public PaymentClip(Long payment_number, double amount,   Date payment_date,String status, String user) {
 		super();
 		this.payment_number = payment_number;
 		this.amount = amount;
@@ -111,21 +103,7 @@ public class PaymentClip implements Serializable {
 	public void setAmount(double amount) {
 		this.amount = amount;
 	}
-/*
-	public Integer getTerms() {
-		return terms;
-	}
 
-	public void setTerms(Integer terms) {
-		this.terms = terms;
-	}
-	public double getRate() {
-		return rate;
-	}
-
-	public void setRate(double rate) {
-		this.rate = rate;
-	}*/
 
 
 }
